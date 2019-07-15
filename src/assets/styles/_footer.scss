@@ -1,0 +1,160 @@
+.footer {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 25% 35% 30%;
+  -ms-grid-columns: 447px 318px 460px;
+  grid-template-rows: 185px;
+  -ms-grid-rows: 185px;
+  width: 100%;
+  height: 185px;
+  background-color: #EBECF0;
+
+  &-menu {
+    list-style: none;
+    display: flex;
+    flex: 1 0 0;
+    padding: 0;
+
+    &-item {
+      margin-top: 31px;
+
+      &__icon {
+
+        &_facebook {
+          background-image: url("../images/Facebook-color.svg");
+          height: 24.56px;	
+          width: 22.67px;
+        }
+
+        &_twitter {
+          background-image: url("../images/Twitter-color.svg");
+          height: 21.72px;	
+          width: 25.5px;
+        }
+
+        &_google {
+          background-image: url("../images/GooglePlus-color\ \(1\).svg");
+          height: 24.18px;	
+          width: 38px;
+        }
+
+        &_facebook:hover {
+          background-image: url("../images/Facebook_hover-color.svg");
+          height: 27px;	
+          width: 25px;
+        }
+
+        &_twitter:hover {
+          background-image: url("../images/Twitter_hover-color.svg");
+          height: 23px;	
+          width: 28px;
+        }
+
+        &_google:hover {
+          background-image: url("../images/GooglePlus-color.svg");
+          height: 27px;	
+          width: 42px;
+        }
+      }
+    }
+
+    &-item:first-of-type {
+      margin-right: 29px;
+    }
+
+    &-item:last-of-type {
+      margin-left: 31px;
+    }
+
+  }
+
+  &-form {
+    grid-column: 1;
+    -ms-grid-column: 1;
+    width: 25%;
+    height: 120px;
+    margin: 32px 10% 0 25%;
+
+    &__input {
+      border: none;
+      background-color: inherit;
+      outline: none;
+      margin: 32px 0 17px 0;
+    }
+
+    &__input::placeholder {
+      height: 20px;	
+      width: 45.81px;	
+      color: $main_title;	
+      font-family: "Proxima Nova Regular";	
+      font-size: 16px;	
+      font-weight: 600;	
+      line-height: 20px;	
+    }
+
+    &__input:-ms-input-placeholder {
+      height: 20px;	
+      width: 45.81px;	
+      color: $main_title;	
+      font-family: "Proxima Nova Regular";	
+      font-size: 16px;	
+      font-weight: 600;	
+      line-height: 20px;	
+    }
+
+    &__button {
+      border: none;
+      background-color: inherit;
+      width: 24px;
+      height: 17px;
+      background-image: url("../images/arrow-right.svg");
+      align-self: flex-end;
+      margin-bottom: 15px;
+    }
+
+    &-wrapper {
+      width: 321px;
+      border-bottom: 2px solid $main_title;
+      display: flex;
+      flex: 1 0 0;
+      justify-content: space-between;
+    }
+  }
+
+  &-icons {
+    grid-column: 2;
+    -ms-grid-column: 2;
+    width: 443px;
+    height: 120px;
+    margin: 32px 0 0 150px; 
+  }
+
+  &-info {
+    grid-column: 3;
+    -ms-grid-column: 3;
+    width: 353px;
+    height: 120px;
+    margin: 32px 0 0 0;
+
+    &__text {
+      height: 100.3px;	
+      width: 353px;	
+      color: #837F89;	
+      font-family: "Proxima Nova Regular";	
+      font-size: 12px;	
+      line-height: 20px;	
+      text-align: justify;
+    }
+  }
+
+  &__header {
+    height: 17px;	
+    width: 284.22px;	
+    color: #837F89;	
+    font-family: "Proxima Nova Regular";	
+    font-size: 14px;	
+    font-weight: 600;	
+    letter-spacing: 0.88px;	
+    line-height: 17px;
+  }
+}

@@ -1,0 +1,114 @@
+@import 'variebles';
+
+.menu-wrapper {
+  width: $menu_width;
+  height: 3300px;
+  border-right: 2px solid #ebecf0;
+  box-sizing: border-box;
+
+  &_red {
+    background-color: $main_color_red;
+    border-right: 2px solid #d44242;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  list-style:none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 523px;
+  background-color: #fff;
+  height: 3299.5px;
+  top: 51.5px;
+  left: -523px;
+  transition: left .2s;
+  z-index: 2;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+
+  &_red {
+    background-color: $main_color_red;
+    color: #ffffff;
+    margin-top: 1px;
+  }
+
+  &-ticker {
+    display: none;
+  }
+
+  &-button {
+    color: #fff;
+    background-image: url('../images/burger.svg');
+    position: absolute;
+    margin-left: 18px;
+    top: 81px;
+    transition: left .23s;
+    width: 24px;
+    height: 19px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+
+    &_red {
+      background-image: url("../images/burger\ \(2\).svg");
+      width: 22px;
+      height: 17px;
+    }
+  }
+
+  &-item {
+    width: 199;
+    height: 22px;
+    color: #2B292D;	
+    font-size: 18px;	
+    font-weight: 600;	
+    line-height: 22px;
+    margin-left: 170px;
+
+
+    &_link_red {
+      color: #ffffff;
+    }
+  }
+
+  &-item:first-of-type {
+    margin-top: 210px;
+  }
+
+  &-item:not(:first-of-type) {
+    margin-top: 24px;
+  }
+
+  &-item:first-of-type::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background-color: $main_color;
+    height: 2px;	
+    width: 32px;
+    top: 215px;
+    left: 130px;
+  }
+
+  &-item__red:first-of-type::before {
+    background-color: #fff;
+  }
+
+}
+
+.menu-ticker:checked ~ .menu {
+  left: 54px;
+}
+
+.menu-ticker:checked ~ .menu-button {
+  width: 18px;
+  height: 19px;
+  background-image: url("../images/x.svg");
+}
+
+.menu-ticker:checked ~ .menu-button_red {
+  background-image: url("../images/x\ \(1\).svg");
+}

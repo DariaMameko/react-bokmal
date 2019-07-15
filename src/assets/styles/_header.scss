@@ -1,0 +1,252 @@
+@import 'colors';
+
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-items: end;
+  border-bottom: 2px solid #ebecf0;
+
+  &-line_direction_right {
+    width: 140px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-right: 2px solid #ebecf0;
+    background-color: #ffffff;
+  }
+
+  &-logo {
+    grid-column: 1;
+    height: 19px;
+    width: 104px;
+    background-image: url('../images/bokmål_logo.svg');
+    margin-left: 19px;
+  }
+
+  &-images {
+    display: flex;
+    flex: 1 0 0;
+    width: 92px;
+    height: 50px;
+    border-left: 2px solid #ebecf0;
+
+    &__search {
+      width: 20px;
+      height: 20px;
+      background-image: url("../images/search.svg");
+      margin: 15px 20px 15px 15px;
+    }
+
+    &__search:hover {
+      background-image: url("../images/search-hover.svg");
+    }
+
+    &__note {
+      width: 16px;
+      height: 20px;
+      background-image: url("../images/bookmark.svg");
+      margin: 16px 19px 14px 0;
+    }
+  }
+
+  &-menu {
+    list-style: none;
+    color: #2B292D;	
+    font-family: "Proxima Nova Regular";	
+    font-size: 14px;	
+    font-weight: 600;	
+    letter-spacing: 0.6px;	
+    line-height: 17px;
+
+    &-wrapper {
+      width: 81%;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  &-menu__link {
+    color: $main_title;
+    text-decoration: none;
+  }
+
+  &-ticker {
+    display: none;
+  }
+
+  &-menu_dropdown {
+    display: block;
+    position: absolute;
+    list-style:none;
+    margin: 0;
+    box-sizing: border-box;
+    width: 200px;
+    top: -200px;
+    left: 0;
+    transition: top .2s;
+    z-index: 9999;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    flex: 1 0 0;
+    justify-content: center;
+    width: 100%;
+    background-color: #ffffff;
+
+    &__link {
+      color: $main_title;
+      text-decoration: none;
+    }
+
+    &__link_red {
+      color: $main_color_red;
+    }
+
+    &__link_yellow {
+      color: $main_color;
+    }
+
+    &-item {
+      height: 61px;	
+      font-size: 18px;	
+      line-height: 22px;
+      width: 208px;
+      margin-top: 39px;
+    }
+
+    &-item:first-of-type::after {
+      content: '';
+      position: relative;
+      left: 59px;
+      display: inline-block;
+      width: 2px;
+      height: 12px;
+      background-color: #c9c8ca;
+    }
+
+    &-item:last-of-type::before {
+      content: '';
+      position: relative;
+      right: 59px;
+      display: inline-block;
+      width: 2px;
+      height: 12px;
+      background-color: #c9c8ca;
+    }
+
+    &-item:first-of-type {
+      color: $main_color;	
+    }
+  }
+
+  &-button {
+    color: #000;
+    position: absolute;
+    cursor: pointer;
+    top: -4px;
+    left: 137px;
+    transition: left .23s;
+    z-index: 3;
+    width: 25px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+
+
+  &-ticker:checked ~ .header-button {
+    left: 137px;
+  }
+  &-ticker:checked ~ .header-menu_dropdown {
+    top: 51px;
+  }
+
+}
+
+.menu_theme_all {
+  height: 29px;
+  padding: 0;
+  margin-left: 15px;
+  border-radius: 100px;
+  width: 117px;
+  background-color: $main_color;
+  display: flex;
+  align-items: center;
+
+  &_red {
+    background-color: $main_color_red;
+  }
+
+  &-item {
+    display: inline-block; 
+    position: relative; 
+    z-index: 100;
+    width: 81px;
+    padding-left: 17px;
+
+    &_red {
+      color: #ffffff;
+      width: 100%;
+    }
+
+    &__link {
+      word-spacing: 2.125px;
+
+      &_red {
+        word-spacing: 0.5px;
+      }
+    }
+  }
+}
+
+.menu_row {
+  display: flex;
+  flex: 1 0 0;
+  padding: 0;
+  width: 400px;
+  justify-content: flex-end;
+
+  &__item {
+    width: 137px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 17px;
+    font-weight: 600;
+    letter-spacing: 0.88;
+    color: $main_title;
+    position: relative;
+    font-family: "Proxima Nova Regular";
+  }
+
+  &__item:hover .menu_row__item_link::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 48px;
+    height: 2px;
+    background-color: #eeb20b;
+    top: 21px;
+    left: 45px;
+  }
+
+  &__item:hover .menu_row__item_link_red::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 48px;
+    height: 2px;
+    background-color: #f94f4c;
+    top: 21px;
+    left: 45px;
+  }
+}
+
+
+
+
+

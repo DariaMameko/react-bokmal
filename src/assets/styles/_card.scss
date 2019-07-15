@@ -1,0 +1,136 @@
+.card {
+  width: 30%;
+  position: relative;
+
+  &__image {
+    width: 100%;
+    background-size: 100%;
+    background-position: 50% 50%;
+    height: 200px;
+    margin: 0 0 16px 0;
+  }
+
+  &__text {
+    margin: 14px 0 0 0;
+    height: 44px;	
+    color: $main_title;	
+    font-family: "Proxima Nova Regular";	
+    font-size: 18px;	
+    font-weight: 600;	
+    line-height: 22px;
+  }
+
+  &__header_main{
+    margin: 30px 0 0 0;
+    color: #c9c8ca;	
+    font-family: "Proxima Nova Regular";	
+    font-size: 20px;	
+    font-weight: 600;	
+    line-height: 20px;
+  }
+}
+
+.row_fourth {
+  margin: 61px 0 0 0;
+  background-color: #f7f7f9;
+  width: calc(100% - 58px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 40px 58px;
+  box-sizing: padding-box;
+
+  &_wrapper_content {
+    width: 82vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__note {
+    background-image: url("../images/bookmark_big.svg");
+    position: absolute;
+    right: 14px;
+    top: 240px;
+  }
+}
+
+.row_fifth {
+  width: calc(100% - 178px);
+  margin: 61px 0 0 178px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  &__image {
+    width: 50%;
+    height: 254px;
+    background-image: url("../images/row_fifth.jpg");
+    position: absolute;
+    z-index: 0;
+    left: 330px;
+  }
+
+  &__head {
+    margin-left: -80px;
+    width: 120%;
+    font-size: 28px;
+  }
+
+  &__note {
+    background-image: url("../images/bookmark_big.svg");
+    position: absolute;
+    right: 14px;
+    top: 230px;
+  }
+
+  &-text-block {
+    width: 50%;
+    position: relative;
+    z-index: 1;
+  }
+
+  &_content_wrapper {
+    margin-left: -50px;
+  }
+}
+
+.row_sixth {
+  margin-top: 114px;
+}
+
+.row_seventh {
+  width: 100%;
+  margin: 61px 0 0 0;
+  display: flex;
+  flex: 1 0 0;
+  align-items: center;
+  justify-content: center;
+
+  &__image {
+    background-image: url("../images/arrow.png");
+    width: 22px;
+    height: 22px;
+  }
+
+  &__text {
+    margin: 0 0 0 18px;
+    height: 17px;	
+    width: 106px;	
+    color: $main_title;	
+    font-family: "Proxima Nova Regular";	
+    font-size: 14px;	
+    font-weight: 600;	
+    letter-spacing: 1px;	
+    line-height: 17px;
+  }
+}
+
+.row_seventh:hover .row_seventh__image {
+  background-image: url("../images/rotate-ccw.svg");
+}
+
+.row_seventh:hover .row_seventh__text {
+  color: $main_color;
+}
