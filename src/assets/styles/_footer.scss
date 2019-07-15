@@ -124,7 +124,6 @@
   &-icons {
     grid-column: 2;
     -ms-grid-column: 2;
-    width: 443px;
     height: 120px;
     margin: 32px 0 0 150px; 
   }
@@ -156,5 +155,27 @@
     font-weight: 600;	
     letter-spacing: 0.88px;	
     line-height: 17px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &-menu {
+      width: 35%;
+    }
+
+    &-form {
+      width: calc(25% - 100px);
+      margin-left: 100px;
+    }
+
+    &-info {
+      display: none;
+    }
   }
 }

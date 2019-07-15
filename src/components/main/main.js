@@ -69,7 +69,7 @@ const MainBlock = () => {
       looks: 2045, 
       head: 'Літклуб Букмоль: розклад на квітень',
       header: 'Літклуб'
-    }
+    },
   ];
 
   let newLooks = cards.slice();

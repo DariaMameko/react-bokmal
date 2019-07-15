@@ -5,7 +5,7 @@ import '../../assets/styles/main.scss'
 
 const MainMenu = () => {
   return (
-    <nav className="menu-wrapper">
+    <nav className="menu-wrapper" id='menu_main'>
       <input type="checkbox" className="menu-ticker" id="btn"/>
       <label className="menu-button" htmlFor="btn">
         <div className="menu-button__image"></div>
