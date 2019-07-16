@@ -68,7 +68,7 @@
     background-image: url("../images/row_fifth.jpg");
     position: absolute;
     z-index: 0;
-    left: 40%;
+    left: 30%;
   }
 
   &__head {
@@ -132,4 +132,12 @@
 
 .row_seventh:hover .row_seventh__text {
   color: $main_color;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .row-fifth {
+    &-image {
+      margin-left: 40%;
+    }
+  }
 }

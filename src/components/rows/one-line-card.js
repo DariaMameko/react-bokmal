@@ -17,7 +17,7 @@ class OneLineCard extends React.Component {
               <p className="images-looks__count">8129</p>
             </div>
             <h2 className="content-row-text-block__head main-image__text content_red_line">
-              Шість пригодницьких історій <br/> для літнього читання
+              Шість пригодницьких історій для літнього читання
             </h2>
             <div className="content-row-read images-read">
               <div className="images-read__button">Читати</div>
